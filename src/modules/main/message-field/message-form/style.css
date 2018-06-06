@@ -1,0 +1,23 @@
+.message-form-container {
+  height: 10%;
+  width: 90%;
+  border: 2px solid #555;
+  border-radius: 5px;
+  display: flex;
+}
+
+.message-form-input {
+  border: none;
+  width: 100%;
+}
+
+input:focus::-webkit-input-placeholder {
+  font-size: 10px;
+  position: relative;
+  top: -12px; 
+  transition: 0.2s ease-out;
+}
+
+input::-webkit-input-placeholder {
+  transition: 0.2s ease-in;
+}
