@@ -28,3 +28,13 @@ button {
   color: rgba(233, 233, 233, 0.7);
   cursor: pointer;
 }
+
+* {
+  text-decoration: none;
+}
+
+*:active,
+*:visited,
+*:link {
+  color: rgba(139, 139, 139, 0.8);
+}

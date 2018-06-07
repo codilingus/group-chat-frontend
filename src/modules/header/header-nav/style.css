@@ -1,0 +1,9 @@
+.header-nav {
+  width: 150px;
+  padding-right: 20px;
+}
+
+.header-nav-link {
+  padding: 5px;
+  font-size: 18px;
+}

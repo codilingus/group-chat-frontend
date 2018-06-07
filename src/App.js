@@ -1,19 +1,17 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
-import Registration from './modules/registration';
-import Login from './modules/login';
+import WelcomePage from './modules/welcome-page';
 import Main from './modules/main';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className='App'>
         <BrowserRouter>
           <Switch>
-            <Route path='/registration' component={Registration} />
-            <Route path='/login' component={Login} />
-            <Route path='' component={Main} />
+            <Route path='/me' component={Main} />
+            <Route exact path='' component={WelcomePage} />
           </Switch>
         </BrowserRouter>
       </div>
