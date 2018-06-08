@@ -6,7 +6,6 @@ class HeaderNav extends Component {
 
   render() {
     return (
-      <BrowserRouter>
         <div className='header-nav'>
           <Link className='header-nav-link'
             to='/registration'>
@@ -17,7 +16,6 @@ class HeaderNav extends Component {
             Log in
           </Link>
         </div>
-      </BrowserRouter>
     );
   }
 };

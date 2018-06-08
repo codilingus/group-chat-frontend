@@ -1,28 +1,25 @@
-import React, { PureComponent } from 'react';
-import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
+import React, { Component } from 'react';
+import { Redirect, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
 import WelcomePage from './modules/welcome-page';
 import Main from './modules/main';
 import './App.css';
 
-class App extends PureComponent {
+class App extends Component {
 
   render() {
     const { userIsActive } = this.props;
     return (
       <div className='App'>
-        <BrowserRouter>
-          <Switch>
-            <Route path='/me' component={Main} />
-            <Route exact path='' component={WelcomePage} />
-          </Switch>
-        </BrowserRouter>
-        <BrowserRouter>
-          {
-            userIsActive &&
-            (<Redirect to="/me" />)
-          }
-        </BrowserRouter>
+        <Switch>
+          <Route path='/me' component={Main} />
+        </Switch>
+        <WelcomePage />
+        {
+          userIsActive &&
+          (<Redirect to="/me" />)
+        }
       </div>
     );
   }
@@ -36,4 +33,4 @@ const mapDispatchToProps = {
 
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
