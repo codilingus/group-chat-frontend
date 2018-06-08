@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Link, Router } from 'react-router-dom';
+import { BrowserRouter, Link } from 'react-router-dom';
 import './style.css';
 
 class HeaderNav extends Component {

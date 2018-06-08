@@ -1,11 +1,14 @@
-import React, { Component } from 'react';
-import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
+import React, { PureComponent } from 'react';
+import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
+import { connect } from 'react-redux';
 import WelcomePage from './modules/welcome-page';
 import Main from './modules/main';
 import './App.css';
 
-class App extends Component {
+class App extends PureComponent {
+
   render() {
+    const { userIsActive } = this.props;
     return (
       <div className='App'>
         <BrowserRouter>
@@ -14,9 +17,23 @@ class App extends Component {
             <Route exact path='' component={WelcomePage} />
           </Switch>
         </BrowserRouter>
+        <BrowserRouter>
+          {
+            userIsActive &&
+            (<Redirect to="/me" />)
+          }
+        </BrowserRouter>
       </div>
     );
   }
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+  userIsActive: state.currentUser.isActive
+});
+
+const mapDispatchToProps = {
+
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

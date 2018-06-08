@@ -16,7 +16,7 @@ class DirectMessages extends Component {
       <div className='direct-messages-container'>
         <div className='direct-messages-header'>
           Direct Messages
-            <FaPlus className='icon'
+          <FaPlus className='icon'
             onClick={this.handleAddDirectMessage} />
           {directMessages.map((directMessage, index) => (
             <DirectMessage

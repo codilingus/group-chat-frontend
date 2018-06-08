@@ -18,7 +18,7 @@ class InputWrapper extends Component {
   }
 
   render() {
-    const { text, sendDetail, type, placeholder } = this.props;
+    const { text, type, placeholder } = this.props;
     const { detail } = this.state;
     return (
       <div className='input-wrapper'>
