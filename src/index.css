@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+input { 
+  border: none;
+  padding: 7px;
+}
+
+input:focus {
+  background-color: rgb(191, 216, 189);
+}
+
+
+button {
+  border: none;
+  cursor: pointer;
+  transition: background-color 1.5s;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  color: rgba(233, 233, 233, 0.7);
+  cursor: pointer;
+}
+
+* {
+  text-decoration: none;
+}
+
+*:active,
+*:visited,
+*:link {
+  color: rgba(139, 139, 139, 0.8);
+}

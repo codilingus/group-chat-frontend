@@ -1,0 +1,9 @@
+.inactive-user {
+  width: 15px;
+  height: 15px;
+  padding: 5px;
+}
+
+.active-user {
+  color: rgb(96, 150, 96);
+}
