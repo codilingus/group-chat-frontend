@@ -1,3 +1,15 @@
 .channels-container {
   padding-top: 15px;
+  width: 100%;
+}
+
+.channel-input__adding-new-channel {
+  width: 100px;
+}
+
+.channel__adding-channel {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
