@@ -1,32 +1,78 @@
 import React, { Component } from 'react';
 import FaPlus from 'react-icons/lib/fa/plus-circle';
+import { connect } from 'react-redux';
+import { addNewChannel } from '../../../../state/channels';
 import Channel from './channel';
 import './style.css';
 
-const channels = ['a', 'b', 'c'];
-
 class Channels extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      beingCreated: false,
+      newChannelName: ''
+    }
+  };
 
-  handleAddChannel = () => {
-    console.log('to do');
-  }
+  handleAddingChannel = () => {
+    this.setState({
+      isChannelCreated: true
+    });
+  };
+
+  handleNewChannelName = (event) => {
+    const newChannelName = event.target.value;
+    this.setState({
+      newChannelName
+    })
+  };
+
+  handleAddNewChannel = () => {
+    const { newChannelName } = this.state;
+    this.props.onAddNewChannel(newChannelName);
+    this.setState({
+      isChannelCreated: false,
+      newChannelName: ''
+    });
+  };
 
   render() {
-    console.log(channels);
+    const { beingCreated, newChannelName } = this.state;
+    const { channels } = this.props;
     return (
       <div className='channels-container'>
-      <div className='channels-header'>
-      Channels
-      <FaPlus className='icon' onClick={this.handleAddChannel}/>
-      </div>
+        {!beingCreated && (
+          <div className='channels-header'>
+            Channels
+          <FaPlus className='icon'
+              onClick={this.handleAddingChannel} />
+          </div>)}
+        {beingCreated && (
+          <div className='channel__adding-channel'>
+            <input className='channel-input__adding-new-channel'
+              placeholder='Channel name'
+              value={newChannelName}
+              onChange={this.handleNewChannelName} />
+            <FaPlus className='icon'
+              onClick={this.handleAddNewChannel} />
+          </div>
+        )}
         {channels.map((channel, index) =>
           (<Channel
             key={index}
-            name={channel} />)
+            name={channel.name} />)
         )}
       </div>
     );
   }
 }
 
-export default Channels;
+const mapStateToProps = (state) => ({
+  channels: state.channels
+});
+
+const mapDispatchToProps = {
+  onAddNewChannel: addNewChannel
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Channels);
