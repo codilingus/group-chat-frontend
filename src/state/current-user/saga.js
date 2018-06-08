@@ -9,8 +9,7 @@ export default function* () {
 function* onAddingNewUser(action) {
   const { payload } = action;
   try {
-    yield call(registerUser, payload.name, payload.surname,
-      payload.username, payload.password, payload.email);
+    yield call(registerUser, payload);
     yield put(addNewUserSuccess());
   } catch (error) {
     yield put(addNewUserFailure());

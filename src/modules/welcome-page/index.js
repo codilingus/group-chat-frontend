@@ -11,10 +11,8 @@ class WelcomePage extends Component {
     return (
       <div className='welcome-page-container'>
         <Header />
-        <Switch>
-          <Route path='/registration' component={Registration} />
-          <Route path='/login' component={Login} />
-        </Switch>
+        <Route path='/registration' component={Registration} />
+        <Route path='/login' component={Login} />
       </div>
     );
   }

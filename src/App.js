@@ -9,24 +9,21 @@ import './App.css';
 class App extends Component {
 
   render() {
-    const { userIsActive } = this.props;
+    const { isUserActive } = this.props;
     return (
       <div className='App'>
-        <Switch>
-          <Route path='/me' component={Main} />
-        </Switch>
+        <Route path='/me' component={Main} />
         <WelcomePage />
-        {
-          userIsActive &&
-          (<Redirect to="/me" />)
-        }
+        {isUserActive && (
+          <Redirect to="/me" />
+        )}
       </div>
     );
   }
 }
 
 const mapStateToProps = (state) => ({
-  userIsActive: state.currentUser.isActive
+  isUserActive: state.currentUser.isActive
 });
 
 const mapDispatchToProps = {
