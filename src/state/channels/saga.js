@@ -11,9 +11,9 @@ export default function* () {
 }
 
 function* onAddingNewChannel(action) {
-  const { payload } = action;
+  const { payload: name } = action;
   try {
-    const response = yield call(channelApi.addNewChannel, payload);
+    const response = yield call(channelApi.addNewChannel, name);
     yield put(addNewChannelSuccess(response));
   } catch (error) {
 
