@@ -7,6 +7,7 @@ class Messages extends Component {
 
   render() {
     const { messages, name } = this.props;
+    console.log(messages);
     return (
       <div className='messages-container'>
         {messages.length > 0 && (

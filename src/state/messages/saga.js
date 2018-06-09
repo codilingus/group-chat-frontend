@@ -26,7 +26,7 @@ function* onFetchingMessages(action) {
 function* onFetchingNewMessages(action) {
   const { payload } = action;
   while (true) {
-    const messages = yield call(messagesApi.fetchMessages, payload.name, payload.timestamp);
+    const messages = yield call(messagesApi.fetchMessages, payload);
     yield put(fetchMessagesSuccess(messages));
     yield delay(1000);
   }

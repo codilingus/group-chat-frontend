@@ -15,8 +15,8 @@ class DirectMessage extends Component {
   }
 
   handleFetchingMessage = () => {
-    const { name } = this.props;
-    this.props.onFetchingMessage(name);
+    const { id } = this.props;
+    this.props.onFetchingMessage({ id });
   };
 
   render() {
