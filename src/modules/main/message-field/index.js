@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import Messages from './messages';
 import MessageForm from './message-form';
 import Details from './details';
@@ -15,6 +16,14 @@ class MessageField extends Component {
       </div>
     );
   }
+}
+
+const mapStateToProps = (state) => ({
+
+});
+
+const mapDispatchToProps = {
+  
 }
 
 export default MessageField;

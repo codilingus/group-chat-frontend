@@ -23,7 +23,8 @@ class DirectMessage extends Component {
       <div className='direct-message-container'>
         <FaCircle className={classnames('inactive-user',
           { 'active-user': isActive })} />
-        {name}
+        <div className='user-name'>{name}
+        </div>
       </div>
     );
   }
