@@ -27,7 +27,6 @@ class Login extends Component {
   }
 
   render() {
-    console.log(this.state);
     //maybe we can make one component to handle log in and registration
     return (
       <div className='login-form'>

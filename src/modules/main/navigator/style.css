@@ -1,9 +1,9 @@
 .navigator-container {
   width: 220px;
-  height: 100%;
-  display: flex;
+    display: flex;
   flex-direction: column;
   align-items: center;
+  flex: 1;
   padding: 10px;
   background-color: rgb(133, 86, 107);
   color: rgba(233, 233, 233, 0.7);

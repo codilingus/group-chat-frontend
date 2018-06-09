@@ -1,6 +1,11 @@
-import { post, toJSON } from '../utils/index';
+import { post, toJSON, b64EncodeUnicode } from '../utils/index';
 
 export const loginUser = ({ username, password }) => post(
   'http://localhost:8080/login',
-  { username, password }
+  null,
+  {
+    headers: {
+      authorization: 'Basic ' + b64EncodeUnicode(`${username}:${password}`)
+    }
+  }
 ).then(toJSON);
