@@ -4,7 +4,11 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import createSagaMiddleware from 'redux-saga';
 import { Router } from 'react-router';
-import  createBrowserHistory from 'history/createBrowserHistory';
+import createHistory from "history/createBrowserHistory";
+import { 
+  routerMiddleware, 
+  ConnectedRouter 
+} from 'react-router-redux';
 import rootReducer from './state';
 import rootSaga from './state/saga';
 import './index.css';
@@ -12,9 +16,11 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
 const sagaMiddleware = createSagaMiddleware();
+const history = createHistory();
 
 const reduxMiddlewares = [
-  sagaMiddleware
+  sagaMiddleware,
+  routerMiddleware(history)
 ];
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -25,13 +31,11 @@ const store = createStore(rootReducer, composeEnhancers(
 
 sagaMiddleware.run(rootSaga);
 
-const customHistory = createBrowserHistory()
-
 ReactDOM.render(
   <Provider store={store}>
-    <Router history={customHistory}>
+    <ConnectedRouter history={history}>
       <App />
-    </Router>
+    </ConnectedRouter>
   </Provider>,
   document.getElementById('root'));
 registerServiceWorker();
