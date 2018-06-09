@@ -6,7 +6,6 @@ export const post = (url, body, additionalConfig = {}) => fetch(url, {
   headers: {
     'Content-Type': 'application/json',
     ...additionalConfig.headers,
-
   }
 });
 

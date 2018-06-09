@@ -21,7 +21,7 @@ class Login extends Component {
     this.setState({ password });
   };
 
-  logIn = () => {
+  onLogIn = () => {
     const { username, password } = this.state;
     this.props.onLogIn({username, password});
   }
@@ -34,6 +34,7 @@ class Login extends Component {
         <InputWrapper text="Username/mail"
           type="text"
           placeholder="username or email"
+          error={this.props.invalidLogin}
           onChange={this.handleUsername} />
         <InputWrapper text="Password"
           type="password"
@@ -41,7 +42,7 @@ class Login extends Component {
           onChange={this.handlePassword} />
         <button 
           className='login-button-resume'
-          onClick={this.logIn}>
+          onClick={this.onLogIn}>
           Sign in
         </button>
       </div>
@@ -49,8 +50,14 @@ class Login extends Component {
   }
 }
 
+const mapStateToProps = (state) => {
+  return {
+    invalidLogin: state.login.invalidLogin
+  };
+}
+
 const mapDispatchToProps = {
-  onLogIn: logIn
+  onLogIn: logIn,
 };
 
-export default connect(null, mapDispatchToProps)(Login);
+export default connect(mapStateToProps, mapDispatchToProps)(Login);

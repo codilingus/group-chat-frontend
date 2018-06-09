@@ -13,7 +13,7 @@ class Navigator extends Component {
         <CurrentUser />
         <Channels />
         <DirectMessages />
-        <LogOut />
+        {/* <LogOut /> */}
         {/* maybe better name it OtherUsers instead of DirectMessages? */}
       </div>
     );

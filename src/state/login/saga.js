@@ -4,7 +4,7 @@ import { loginUser } from '../../api/login';
 import { push } from 'react-router-redux';
 
 export default function* () {
-  yield takeLatest(LOGIN, onLogin)
+  yield takeLatest(LOGIN, onLogin);
 }
 
 function* onLogin(action) {

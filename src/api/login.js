@@ -1,8 +1,6 @@
 import { get, toJSON, b64EncodeUnicode } from '../utils/index';
 
-export const loginUser = ({ username, password }) => 
-console.log(username,password) ||
-get(
+export const loginUser = ({ username, password }) => get(
   'http://8daa62b2.ngrok.io/me',
   {
     headers: {

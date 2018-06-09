@@ -2,7 +2,7 @@ import { handleActions, createAction } from 'redux-actions';
 
 const initialState = ({
   loading: false
-})
+});
 
 export const LOGIN = 'login: login';
 const LOGIN_SUCCESS = 'login: login-success';
@@ -13,7 +13,6 @@ export const loginReducer = handleActions({
     ...state,
     loading: true,
     invalidLogin: false,
-    
   }),
 
   [LOGIN_SUCCESS]: (state) => ({

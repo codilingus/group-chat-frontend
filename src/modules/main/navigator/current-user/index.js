@@ -14,8 +14,4 @@ class CurrentUser extends Component {
   }
 }
 
-// const mapDispatchToProps = {
-//   onDetails: details
-// };
-
 export default CurrentUser;
