@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import FaCircle from 'react-icons/lib/fa/circle';
+import { connect } from 'react-redux';
+import { fetchMessages } from '../../../../../state/messages';
 import './style.css';
 
 class DirectMessage extends Component {
@@ -12,8 +14,9 @@ class DirectMessage extends Component {
     }
   }
 
-  handleAddDirectMessage = () => {
-    console.log('to do');
+  handleFetchingMessage = () => {
+    const { name } = this.props;
+    this.props.onFetchingMessage(name);
   };
 
   render() {
@@ -23,11 +26,21 @@ class DirectMessage extends Component {
       <div className='direct-message-container'>
         <FaCircle className={classnames('inactive-user',
           { 'active-user': isActive })} />
-        <div className='user-name'>{name}
+        <div className='user-name'
+          onClick={this.handleFetchingMessage}>
+          {name}
         </div>
       </div>
     );
   }
 }
 
-export default DirectMessage;
+const mapStateToProps = (state) => ({
+
+});
+
+const mapDispatchToProps = {
+  onFetchingMessage: fetchMessages
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(DirectMessage);

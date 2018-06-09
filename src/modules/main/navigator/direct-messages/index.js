@@ -13,7 +13,7 @@ class DirectMessages extends Component {
 
   };
 
-  componentDidMount = () => {
+  componentDidMount() {
     this.props.fetchUsers();
   };
 
@@ -40,7 +40,7 @@ class DirectMessages extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  users: state.users
+  users: state.users,
 });
 
 const mapDispatchToProps = {
