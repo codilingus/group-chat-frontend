@@ -23,7 +23,7 @@ class Login extends Component {
 
   logIn = () => {
     const { username, password } = this.state;
-    this.props.onLogIn(username, password);
+    this.props.onLogIn({username, password});
   }
 
   render() {
@@ -34,11 +34,11 @@ class Login extends Component {
         <InputWrapper text="Username/mail"
           type="text"
           placeholder="username or email"
-          sendDetail={this.handleUsername} />
+          onChange={this.handleUsername} />
         <InputWrapper text="Password"
           type="password"
           placeholder="******"
-          sendDetail={this.handlePassword} />
+          onChange={this.handlePassword} />
         <button 
           className='login-button-resume'
           onClick={this.logIn}>

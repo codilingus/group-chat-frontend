@@ -9,12 +9,11 @@ export default function* () {
 
 function* onLogin(action) {
   const { payload } = action;
-  console.log(payload);
   try {
     yield call(loginUser, payload);
+    yield put(push('/me'));
     yield put(logInSuccess());
   } catch (error) {
-    yield put(push('/me'))
     yield put(logInFailure());
   }
 }

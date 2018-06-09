@@ -11,17 +11,21 @@ const LOGIN_FAILURE = 'login: login-failure';
 export const loginReducer = handleActions({
   [LOGIN]: (state) => ({
     ...state,
-    loading: true
+    loading: true,
+    invalidLogin: false,
+    
   }),
 
   [LOGIN_SUCCESS]: (state) => ({
     ...state,
-    loading: false
+    loading: false,
+    invalidLogin: false
   }),
 
   [LOGIN_FAILURE]: (state) => ({
     ...state,
-    loading: false
+    loading: false,
+    invalidLogin: true
   })
 }, initialState);
   

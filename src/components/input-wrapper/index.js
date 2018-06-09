@@ -1,20 +1,22 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import classNames from 'classnames';
 import './style.css';
 
 class InputWrapper extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      detail: ''
+      value: ''
     }
   }
 
-  handleDetailValue = (event) => {
-    const detail = event.target.value;
+  onChange = (event) => {
+    const value = event.target.value;
     this.setState({
-      detail
+      value
     });
-    this.props.sendDetail(detail);
+    this.props.onChange(value);
   }
 
   render() {
@@ -23,14 +25,22 @@ class InputWrapper extends Component {
     return (
       <div className='input-wrapper'>
         <span>{text}</span>
-        <input className='input-wrapper-input'
+        <input className={classNames(
+            'input-wrapper-input', 
+            this.props.invalidLogin && 'input-wrapper-input--invalid')}
           value={detail}
           type={type}
           placeholder={placeholder}
-          onChange={this.handleDetailValue} />
+          onChange={this.onChange} />
       </div>
     );
   }
 }
 
-export default InputWrapper;
+const mapStateToProps = (state) => {
+  return {
+    invalidLogin: state.login.invalidLogin
+  };
+}
+
+export default connect(mapStateToProps)(InputWrapper);
