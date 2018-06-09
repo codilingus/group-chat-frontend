@@ -2,7 +2,9 @@ import { handleAction, createAction, handleActions } from 'redux-actions';
 import { get, last } from 'lodash';
 
 const initialState = {
-  messages: []
+  messages: [],
+  loading: false,
+  timestamp: 0
 };
 
 export const FETCH_MESSAGES = 'messages: fetch-messages';
