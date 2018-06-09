@@ -12,11 +12,13 @@ class App extends Component {
     const { isUserActive } = this.props;
     return (
       <div className='App'>
-        <Route path='/me' component={Main} />
-        <WelcomePage />
-        {isUserActive && (
-          <Redirect to="/me" />
-        )}
+        <Switch>
+          <Route path='/me' component={Main} />
+          <WelcomePage />
+          {isUserActive && (
+            <Redirect to="/me" />
+          )}
+        </Switch>
       </div>
     );
   }

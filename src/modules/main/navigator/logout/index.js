@@ -1,15 +1,23 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import './style.css';
+import { logOut } from '../../../../state/logout/index';
 
 class LogOut extends Component {
 
   render() {
     return (
-      <div className='logout'>
-        <h2>LogOut</h2>
+      <div 
+        className='logout'
+        onClick={this.props.onLogOut}>
+        <span>LogOut</span>
       </div>
     )
   }
 }
 
-export default LogOut;
+const mapDispatchToProps = {
+  onLogOut: logOut
+};
+
+export default connect(null, mapDispatchToProps)(LogOut);
