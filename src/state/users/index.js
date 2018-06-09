@@ -1,6 +1,10 @@
 import { handleActions, createAction } from 'redux-actions';
 
-const initialState = ['Me'];
+const initialState = [{
+  name: 'Me',
+  id: 0,
+  username: 'My account'
+}];
 
 export const FETCH_USERS = 'users: fetch-users';
 const FETCH_USERS_SUCCESS = 'users: fetch-users-success';

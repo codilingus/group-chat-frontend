@@ -25,10 +25,13 @@ class DirectMessages extends Component {
           Direct Messages
           <FaPlus className='icon'
             onClick={this.handleAddDirectMessage} />
-          {users.map((directMessage, index) => (
+          {users.map((user, index) => (
             <DirectMessage
               key={index}
-              name={directMessage} />
+              name={user.name}
+              id={user.id}
+              email={user.email}
+              username={user.username} />
           ))}
         </div>
       </div>
