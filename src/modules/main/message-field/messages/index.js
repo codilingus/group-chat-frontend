@@ -1,30 +1,37 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import Message from './message';
+import {
+  selectLastMessage,
+  messagesSelector,
+  selectConversationist
+} from '../../../../state/messages/selectors';
 import './style.css';
 
-class Messages extends Component {
+class Messages extends PureComponent {
 
   render() {
-    const { messages, name } = this.props;
-    console.log(messages);
+    const { messages } = this.props;
     return (
       <div className='messages-container'>
-        {messages.length > 0 && (
-          <div>
-            {messages.map((message, index) => (
-              <Message text={message}
-                key={index} />
-            ))}
-          </div>)}
+        {(messages.length > 0) && (
+          messages.map((message, index) => (
+            <Message
+              text={message.text}
+              uderId={message.userId}
+              username={message.username}
+              key={index} />
+          ))
+        )}
       </div>
     );
   }
 }
 
 const mapStateToProps = (state) => ({
-  messages: state.messages.messages,
-  timestamp: state.messages.timestamp
+  messages: messagesSelector(state),
+  lastMessage: selectLastMessage(state),
+  conversetionist: selectConversationist(state)
 });
 
 const mapDispatchToProps = {

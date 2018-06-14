@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import './style.css';
 
-class Message extends Component {
+const Message = ({ text, username }) => {
 
-  render() {
-    const { text } = this.props;
-    return (
-      <div className='message-container'>
+  return (
+    <div className='message-container' >
+      <span className='message-conversationist-name'>
+        {username}
+      </span>
+      <span className='message-text'>
         {text}
-      </div>
-    );
-  }
-}
+      </span>
+    </div >
+  )
+};
 
 export default Message;

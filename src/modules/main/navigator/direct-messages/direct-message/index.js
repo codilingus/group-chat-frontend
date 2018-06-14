@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 import classnames from 'classnames';
 import FaCircle from 'react-icons/lib/fa/circle';
 import { connect } from 'react-redux';
-import { fetchMessages } from '../../../../../state/messages';
+import {
+  clearMessageBoard,
+  fetchMessages,
+  setConversationistAndClearBoard
+} from '../../../../../state/messages';
 import './style.css';
 
 class DirectMessage extends Component {
@@ -16,6 +20,7 @@ class DirectMessage extends Component {
 
   handleFetchingMessage = () => {
     const { id } = this.props;
+    this.props.onClearMessageBoard();
     this.props.onFetchingMessage({ id });
   };
 
@@ -40,7 +45,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = {
-  onFetchingMessage: fetchMessages
+  onFetchingMessage: fetchMessages,
+  onClearMessageBoard: clearMessageBoard
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(DirectMessage);

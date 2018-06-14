@@ -1,33 +1,31 @@
 import { delay } from 'redux-saga';
-import { takeEvery, call, put } from 'redux-saga/effects';
-import {
-  fetchMessagesSuccess,
-  fetchMessagesFailure,
-  FETCH_MESSAGES,
-  FETCH_MESSAGES_SUCCESS
-} from './index';
+import { call, put, select } from 'redux-saga/effects';
+import { fetchMessagesSuccess, fetchMessagesFailure } from './index';
 import * as messagesApi from '../../api/messages';
+import {
+  addUsernamesToMessage,
+  selectLastMessageTimestamp,
+  selectActiveConversationId
+} from './selectors';
 
 export default function* () {
-  yield takeEvery(FETCH_MESSAGES, onFetchingMessages);
-  yield takeEvery(FETCH_MESSAGES_SUCCESS, onFetchingNewMessages);
-};
 
-function* onFetchingMessages(action) {
-  const { payload } = action;
-  try {
-    const messages = yield call(messagesApi.fetchMessages, payload);
-    yield put(fetchMessagesSuccess(messages));
-  } catch (error) {
-
-  }
-};
-
-function* onFetchingNewMessages(action) {
-  const { payload } = action;
   while (true) {
-    const messages = yield call(messagesApi.fetchMessages, payload);
-    yield put(fetchMessagesSuccess(messages));
     yield delay(1000);
+    const id = yield select(selectActiveConversationId);
+    const timestamp = yield select(selectLastMessageTimestamp);
+    const payload = {
+      id,
+      timestamp
+    };
+    try {
+      const messages = yield call(messagesApi.fetchMessages, payload);
+      const state = yield select();
+      yield addUsernamesToMessage(state, messages);
+      yield put(fetchMessagesSuccess({messages, state}));
+      yield delay(1000);
+    } catch (error) {
+      yield put(fetchMessagesFailure(error));
+    }
   }
 }
