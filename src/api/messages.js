@@ -14,7 +14,5 @@ const createGetMessageQueryString = (id, timestamp) => {
   if (timestamp) {
     return `/messages/private/${id}?newerThan=${timestamp}`;
   }
-  else {
-    return `/messages/private/${id}`;
-  }
+  return `/messages/private/${id}`;
 };

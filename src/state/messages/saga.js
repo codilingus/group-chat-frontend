@@ -23,7 +23,6 @@ export default function* () {
       const state = yield select();
       yield addUsernamesToMessage(state, messages);
       yield put(fetchMessagesSuccess({messages, state}));
-      yield delay(1000);
     } catch (error) {
       yield put(fetchMessagesFailure(error));
     }

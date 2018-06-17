@@ -1,11 +1,11 @@
 import { createSelector } from 'reselect';
 import { last } from 'lodash';
 
-export const messagesSelector = state => state.messages.messages;
-export const conversationDetailsSelector = state => state.messages;
+export const selectMessages = state => state.messages.messages;
+export const conversationSelector = state => state.messages;
 
 export const selectLastMessage = createSelector(
-  messagesSelector,
+  selectMessages,
   message => last(message)
 );
 
@@ -15,9 +15,9 @@ export const selectLastMessageTimestamp = createSelector(
 );
 
 export const selectActiveConversationId = createSelector(
-  conversationDetailsSelector,
+  conversationSelector,
   messages => messages.id
-);
+)
 
 export const selectConversationist = state => state.messages.conversetionist;
 
@@ -31,4 +31,4 @@ export const addUsernamesToMessage = (state, messages) => {
   // problem
   const { users } = state;
   messages.map(message => message.username = findUsername(message.userId, users))
-};
+}
