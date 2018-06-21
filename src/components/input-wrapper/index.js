@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import classnames from 'classnames';
-import './style.css';
+import classNames from 'classnames';
+//import './style.css';
 
 class InputWrapper extends Component {
   constructor(props) {
@@ -24,7 +24,7 @@ class InputWrapper extends Component {
     return (
       <div className='input-wrapper'>
         <span>{text}</span>
-        <input className={classnames({
+        <input className={classNames({
           'input-wrapper-input': true,
           'input-wrapper-input--invalid': error
         })}

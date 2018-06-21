@@ -23,7 +23,7 @@ class Login extends Component {
 
   onLogIn = () => {
     const { username, password } = this.state;
-    this.props.onLogIn({username, password});
+    this.props.onLogIn({ username, password });
   }
 
   render() {
@@ -40,7 +40,7 @@ class Login extends Component {
           type="password"
           placeholder="******"
           onChange={this.handlePassword} />
-        <button 
+        <button
           className='login-button-resume'
           onClick={this.onLogIn}>
           Sign in
@@ -51,13 +51,11 @@ class Login extends Component {
 }
 
 const mapStateToProps = (state) => {
-  return {
-    invalidLogin: state.login.invalidLogin
-  };
+  invalidLogin: state.login.invalidLogin
 }
 
 const mapDispatchToProps = {
-  onLogIn: logIn,
+  onLogIn: logIn
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Login);

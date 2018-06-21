@@ -1,5 +1,5 @@
 import { currentUserReducer } from '../../state/current-user';
-import { currentUser } from '../fixtures/current-user';
+import currentUser from '../fixtures/current-user';
 
 const ADD_NEW_USER_SUCCESS = 'current-user: add-new-user-success';
 

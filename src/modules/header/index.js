@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../logo';
 import HeaderNav from './header-nav';
-import './style.css';
+//import './style.css';
 
 class Header extends Component {
 
