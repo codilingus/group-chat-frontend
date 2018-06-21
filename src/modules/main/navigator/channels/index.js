@@ -9,14 +9,14 @@ class Channels extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      beingCreated: false,
+      isBeingCreated: false,
       newChannelName: ''
     }
   };
 
   handleAddingChannel = () => {
     this.setState({
-      beingCreated: true
+      isBeingCreated: true
     });
   };
 
@@ -31,23 +31,23 @@ class Channels extends Component {
     const { newChannelName } = this.state;
     this.props.onAddNewChannel(newChannelName);
     this.setState({
-      beingCreated: false,
+      isBeingCreated: false,
       newChannelName: ''
     });
   };
 
   render() {
-    const { beingCreated, newChannelName } = this.state;
+    const { isBeingCreated, newChannelName } = this.state;
     const { channels } = this.props;
     return (
       <div className='channels-container'>
-        {!beingCreated && (
+        {!isBeingCreated && (
           <div className='channels-header'>
             Channels
           <FaPlus className='icon'
               onClick={this.handleAddingChannel} />
           </div>)}
-        {beingCreated && (
+        {isBeingCreated && (
           <div className='channel__adding-channel'>
             <input className='channel-input__adding-new-channel'
               placeholder='Channel name'

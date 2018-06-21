@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ScrollArea from 'react-scrollbar';
 import Messages from './messages';
 import MessageForm from './message-form';
 import Details from './details';
@@ -10,7 +11,14 @@ class MessageField extends Component {
     return (
       <div className='message-field-container'>
         <Details />
-        <Messages />
+        <ScrollArea
+          speed={0.8}
+          className="area"
+          contentClassName="content"
+          smoothScrolling={true}
+          horizontal={false} >
+          <Messages />
+        </ScrollArea>
         <MessageForm />
       </div>
     );

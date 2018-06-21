@@ -1,6 +1,12 @@
+.direct-message-container {
+  width: 100%;
+  align-items: center;
+  display: flex;
+}
+
 .inactive-user {
-  width: 15px;
-  height: 15px;
+  width: 12px;
+  height: 12px;
   padding: 5px;
 }
 

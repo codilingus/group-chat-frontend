@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import FaPlus from 'react-icons/lib/fa/plus-circle';
+import { connect } from 'react-redux';
+import { fetchUsers } from '../../../../state/users';
 import DirectMessage from './direct-message';
 import './style.css';
 
@@ -11,22 +13,39 @@ class DirectMessages extends Component {
 
   };
 
+  componentDidMount() {
+    this.props.fetchUsers();
+  };
+
   render() {
+    const { users } = this.props;
     return (
       <div className='direct-messages-container'>
         <div className='direct-messages-header'>
           Direct Messages
-          <FaPlus className='icon'
+          <FaPlus
+            className='icon'
             onClick={this.handleAddDirectMessage} />
-          {directMessages.map((directMessage, index) => (
-            <DirectMessage
-              key={index}
-              name={directMessage} />
-          ))}
         </div>
+        {users.map((user, index) => (
+          <DirectMessage
+            key={index}
+            name={user.name}
+            id={user.id}
+            email={user.email}
+            username={user.username} />
+        ))}
       </div>
     );
   }
 }
 
-export default DirectMessages;
+const mapStateToProps = (state) => ({
+  users: state.users,
+});
+
+const mapDispatchToProps = {
+  fetchUsers
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(DirectMessages);

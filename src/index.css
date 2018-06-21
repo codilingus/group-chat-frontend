@@ -34,5 +34,5 @@ button {
 *:active,
 *:visited,
 *:link {
-  color: rgba(139, 139, 139, 0.8);
+  text-decoration: none;
 }
