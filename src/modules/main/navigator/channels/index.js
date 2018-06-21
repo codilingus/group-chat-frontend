@@ -16,11 +16,7 @@ class Channels extends Component {
 
   handleAddingChannel = () => {
     this.setState({
-<<<<<<< HEAD
       isBeingCreated: true
-=======
-      beingCreated: true
->>>>>>> b0963d9db41893607fa7bf77748dcbd645bf1860
     });
   };
 
@@ -35,11 +31,7 @@ class Channels extends Component {
     const { newChannelName } = this.state;
     this.props.onAddNewChannel(newChannelName);
     this.setState({
-<<<<<<< HEAD
       isBeingCreated: false,
-=======
-      beingCreated: false,
->>>>>>> b0963d9db41893607fa7bf77748dcbd645bf1860
       newChannelName: ''
     });
   };
