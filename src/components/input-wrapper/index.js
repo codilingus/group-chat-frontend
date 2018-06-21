@@ -1,33 +1,37 @@
 import React, { Component } from 'react';
+import classNames from 'classnames';
 import './style.css';
 
 class InputWrapper extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      detail: ''
+      value: ''
     }
   }
 
-  handleDetailValue = (event) => {
-    const detail = event.target.value;
+  onChange = (event) => {
+    const value = event.target.value;
     this.setState({
-      detail
+      value
     });
-    this.props.sendDetail(detail);
+    this.props.onChange(value);
   }
 
   render() {
-    const { text, type, placeholder } = this.props;
+    const { text, type, placeholder, error } = this.props;
     const { detail } = this.state;
     return (
       <div className='input-wrapper'>
         <span>{text}</span>
-        <input className='input-wrapper-input'
+        <input className={classNames({
+          'input-wrapper-input': true,
+          'input-wrapper-input--invalid': error
+        })}
           value={detail}
           type={type}
           placeholder={placeholder}
-          onChange={this.handleDetailValue} />
+          onChange={this.onChange} />
       </div>
     );
   }

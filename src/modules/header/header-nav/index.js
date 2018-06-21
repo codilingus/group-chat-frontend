@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './style.css';
 
 class HeaderNav extends Component {
@@ -20,4 +20,10 @@ class HeaderNav extends Component {
   }
 };
 
+// const mapStateToProps 
+
 export default HeaderNav;
+
+{/* <Link className='header-nav-link'
+to='/me'>
+</Link> */}
