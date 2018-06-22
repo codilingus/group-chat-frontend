@@ -5,7 +5,6 @@ import './style.css';
 import { logOut } from '../../../../state/logout/index';
 
 class LogOut extends Component {
-
   render() {
     return (
       <div 

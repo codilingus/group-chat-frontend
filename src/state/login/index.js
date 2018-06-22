@@ -1,7 +1,8 @@
 import { handleActions, createAction } from 'redux-actions';
 
 const initialState = ({
-  loading: false
+  loading: false,
+  activeUser: null
 });
 
 export const LOGIN = 'login: login';
@@ -15,16 +16,17 @@ export const loginReducer = handleActions({
     invalidLogin: false,
   }),
 
-  [LOGIN_SUCCESS]: (state) => ({
+  [LOGIN_SUCCESS]: (state, { payload: userDetails }) => console.log(userDetails) || ({
     ...state,
     loading: false,
-    invalidLogin: false
+    invalidLogin: false,
+    activeUser: userDetails.username
   }),
 
   [LOGIN_FAILURE]: (state) => ({
     ...state,
     loading: false,
-    invalidLogin: true
+    invalidLogin: true,
   })
 }, initialState);
   

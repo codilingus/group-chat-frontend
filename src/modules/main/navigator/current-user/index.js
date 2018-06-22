@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import './style.css'
 
 class CurrentUser extends Component {
@@ -8,10 +9,16 @@ class CurrentUser extends Component {
       <div 
         className='current-user-container'
         onClick={this.props.onDetails}>
-        Me
+        {this.props.activeUser}
       </div>
     );
   }
 }
 
-export default CurrentUser;
+const mapStateToProps = (state) => {
+  return {
+    activeUser: state.login.activeUser
+  };
+}
+
+export default connect(mapStateToProps)(CurrentUser);
