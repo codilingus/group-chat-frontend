@@ -17,7 +17,7 @@ class CurrentUser extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    activeUser: state.login.activeUser
+    activeUser: state.log.activeUser
   };
 }
 
