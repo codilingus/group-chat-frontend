@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './style.css';
 
-class Channel extends Component {
+export class Channel extends Component {
 
   handleDirectToChannel = () => {
     console.log('to do');

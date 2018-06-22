@@ -1,9 +1,11 @@
 import currentUserSaga from './current-user/saga';
 import channelsSaga from './channels/saga';
-import loginSaga from './log/saga';
+import logSaga from './log/saga';
 
 export default function* () {
   yield* currentUserSaga();
   yield* channelsSaga();
-  yield* loginSaga();
+  yield* userSaga();
+  yield* messagesSaga();
+  yield* logSaga();
 }

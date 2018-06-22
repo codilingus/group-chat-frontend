@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react';
-import { connect } from 'react-redux';
 import './style.css';
 
 const channel = 'radnom';
@@ -32,12 +31,4 @@ class MessageForm extends PureComponent {
   }
 }
 
-const mapStateToProps = (state) => ({
-
-});
-
-const mapDispatchToProps = {
-
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(MessageForm);
+export default MessageForm;
