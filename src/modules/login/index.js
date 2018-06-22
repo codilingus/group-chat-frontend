@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import InputWrapper from '../../components/input-wrapper';
 import './style.css';
-import { logIn } from '../../state/login/index'
+import { logIn } from '../../state/login';
 
-class Login extends Component {
+export class Login extends Component {
   constructor() {
     super();
     this.state = {
       username: '',
       password: ''
     }
-  }
+  };
 
   handleUsername = (username) => {
     this.setState({ username });
@@ -24,7 +24,7 @@ class Login extends Component {
   onLogIn = () => {
     const { username, password } = this.state;
     this.props.onLogIn({ username, password });
-  }
+  };
 
   render() {
     //maybe we can make one component to handle log in and registration
@@ -50,9 +50,9 @@ class Login extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state) => ({
   invalidLogin: state.login.invalidLogin
-}
+});
 
 const mapDispatchToProps = {
   onLogIn: logIn

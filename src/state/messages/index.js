@@ -2,12 +2,12 @@ import { createAction, handleActions } from 'redux-actions';
 
 const initialState = {
   messages: [
-    { text: 'hello', timestamp: 3 },
-    { text: 'world', timestamp: 4 }
+    { text: 'hello', timestamp: 3, userId: 0 },
+    { text: 'world', timestamp: 4, userId: 1 }
   ],
   loading: false,
   id: 5,
-  conversetionist: ''
+  conversetionist: 1
 };
 
 const CLEAR_MESSAGE_BOARD = 'messages: clear-message-board';

@@ -7,7 +7,7 @@ import {
 } from '../../../../state/messages/selectors';
 import './style.css';
 
-class Messages extends PureComponent {
+export class Messages extends PureComponent {
 
   render() {
     const { messages } = this.props;

@@ -7,7 +7,7 @@ import './style.css';
 
 const directMessages = ['Anna', 'Jan', 'Ola'];
 
-class DirectMessages extends Component {
+export class DirectMessages extends Component {
 
   handleAddDirectMessage = () => {
 

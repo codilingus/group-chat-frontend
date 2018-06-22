@@ -9,7 +9,6 @@ test('should setup default channels values', () => {
 });
 
 test('should add new channel', () => {
-  console.log(channels);
   const newChannel = {
     name: 'general',
     id: 3
