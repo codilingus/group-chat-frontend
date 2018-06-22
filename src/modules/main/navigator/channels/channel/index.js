@@ -1,10 +1,14 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
+import { connect } from 'react-redux';
 import './style.css';
+import { clearMessageBoard, fetchMessages } from '../../../../../state/messages';
 
-export class Channel extends Component {
+export class Channel extends PureComponent {
 
   handleDirectToChannel = () => {
-    console.log('to do');
+    const { id } = this.props;
+    this.props.onClearMessageBoard();
+    this.props.onFetchingMessage({ id });
   };
 
   render() {
@@ -18,4 +22,13 @@ export class Channel extends Component {
   }
 }
 
-export default Channel;
+const mapStateToProps = (state) => ({
+
+});
+
+const mapDispatchToProps = {
+  onFetchingMessage: fetchMessages,
+  onClearMessageBoard: clearMessageBoard
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Channel);

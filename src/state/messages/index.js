@@ -22,9 +22,10 @@ export const messagesReducer = handleActions({
     messages: [{}]
   }),
 
-  [FETCH_MESSAGES]: (state) => ({
+  [FETCH_MESSAGES]: (state, { payload }) => ({
     ...state,
-    loading: true
+    loading: true,
+    id: payload.id
   }),
 
   [FETCH_MESSAGES_SUCCESS]: (state, { payload }) => ({

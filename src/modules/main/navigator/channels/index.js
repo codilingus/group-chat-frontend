@@ -60,7 +60,8 @@ export class Channels extends Component {
         {channels.map((channel, index) =>
           (<Channel
             key={index}
-            name={channel.name} />)
+            name={channel.name}
+            id={channel.id} />)
         )}
       </div>
     );
