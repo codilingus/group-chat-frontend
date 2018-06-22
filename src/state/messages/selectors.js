@@ -17,7 +17,7 @@ export const selectLastMessageTimestamp = createSelector(
 export const selectActiveConversationId = createSelector(
   conversationSelector,
   messages => messages.id
-)
+);
 
 export const selectConversationist = state => state.messages.conversetionist;
 
@@ -30,5 +30,5 @@ export const addUsernamesToMessage = (state, messages) => {
   // I guess strange idea with this function, but i have no clue how to resolve this 
   // problem
   const { users } = state;
-  messages.map(message => message.username = findUsername(message.userId, users))
-}
+  messages.map(message => message.username = findUsername(message.userId, users));
+};

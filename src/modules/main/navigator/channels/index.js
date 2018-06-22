@@ -5,7 +5,7 @@ import { addNewChannel } from '../../../../state/channels';
 import Channel from './channel';
 import './style.css';
 
-class Channels extends Component {
+export class Channels extends Component {
   constructor(props) {
     super(props);
     this.state = {

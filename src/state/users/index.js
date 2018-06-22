@@ -19,10 +19,10 @@ const FETCH_USERS_FAILURE = 'users: fetch-users-failure';
 
 export const usersReducer = handleActions({
 
-  [FETCH_USERS_SUCCESS]: (state, payload) => {
-    [
+  [FETCH_USERS_SUCCESS]: (state, { users }) => {
+    return [
       ...state,
-      payload
+      ...users
     ]
   }
 }, initialState);

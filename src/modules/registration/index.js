@@ -4,7 +4,7 @@ import InputWrapper from '../../components/input-wrapper';
 import { addNewUser } from '../../state/current-user';
 import './style.css';
 
-class Registration extends PureComponent {
+export class Registration extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
