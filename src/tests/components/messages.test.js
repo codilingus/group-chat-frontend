@@ -10,8 +10,7 @@ describe('should create Messages Container', () => {
 
   beforeEach(() => {
     store = mockStore(state);
-    wrapper = shallow(
-      <ConnectedMessages store={store} />)
+    wrapper = shallow(<ConnectedMessages store={store} />)
   });
 
   test('should render Messages correctly', () => {

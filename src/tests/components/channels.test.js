@@ -13,8 +13,7 @@ describe('Should render Channels container', () => {
   beforeEach(() => {
     store = mockStore(state);
     store.dispatch = jest.fn();
-    wrapper = shallow(
-      <ConnectedChannels store={store} />)
+    wrapper = shallow(<ConnectedChannels store={store} />)
   });
 
   test('should render Channels correctly', () => {

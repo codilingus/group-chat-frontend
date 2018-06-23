@@ -13,8 +13,7 @@ describe('Should render Login container', () => {
   beforeEach(() => {
     store = mockStore(initialState);
     store.dispatch = jest.fn();
-    wrapper = shallow(
-      <ConnectedLogin store={store} />)
+    wrapper = shallow(<ConnectedLogin store={store} />)
   });
 
   test('should render Login correctly', () => {
