@@ -1,7 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 exports[`Should render CurrentUser container should render CurrentUser correctly 1`] = `
 ShallowWrapper {
   "length": 1,
@@ -18,18 +16,12 @@ ShallowWrapper {
       }
     }
   />,
-=======
-=======
->>>>>>> e4e43441855ba2ad17c64e3c3509e38a4dc6cc94
+
 exports[`should render CurrentUser correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <CurrentUser />,
-<<<<<<< HEAD
->>>>>>> e4e43441855ba2ad17c64e3c3509e38a4dc6cc94
-=======
->>>>>>> e4e43441855ba2ad17c64e3c3509e38a4dc6cc94
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -40,8 +32,6 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-<<<<<<< HEAD
-<<<<<<< HEAD
     "nodeType": "class",
     "props": Object {
       "activeUser": null,
@@ -77,9 +67,6 @@ ShallowWrapper {
     "ref": null,
     "rendered": null,
     "type": [Function],
-=======
-=======
->>>>>>> e4e43441855ba2ad17c64e3c3509e38a4dc6cc94
     "nodeType": "host",
     "props": Object {
       "children": "Me",
@@ -89,55 +76,11 @@ ShallowWrapper {
     "ref": null,
     "rendered": "Me",
     "type": "div",
-<<<<<<< HEAD
->>>>>>> e4e43441855ba2ad17c64e3c3509e38a4dc6cc94
-=======
->>>>>>> e4e43441855ba2ad17c64e3c3509e38a4dc6cc94
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "nodeType": "class",
-      "props": Object {
-        "activeUser": null,
-        "dispatch": [MockFunction],
-        "store": Object {
-          "clearActions": [Function],
-          "dispatch": [MockFunction],
-          "getActions": [Function],
-          "getState": [Function],
-          "replaceReducer": [Function],
-          "subscribe": [Function],
-        },
-        "storeSubscription": Subscription {
-          "listeners": Object {
-            "clear": [Function],
-            "get": [Function],
-            "notify": [Function],
-            "subscribe": [Function],
-          },
-          "onStateChange": [Function],
-          "parentSub": undefined,
-          "store": Object {
-            "clearActions": [Function],
-            "dispatch": [MockFunction],
-            "getActions": [Function],
-            "getState": [Function],
-            "replaceReducer": [Function],
-            "subscribe": [Function],
-          },
-          "unsubscribe": [Function],
-        },
-      },
-      "ref": null,
-      "rendered": null,
-      "type": [Function],
-=======
-=======
->>>>>>> e4e43441855ba2ad17c64e3c3509e38a4dc6cc94
       "nodeType": "host",
       "props": Object {
         "children": "Me",
@@ -147,10 +90,6 @@ ShallowWrapper {
       "ref": null,
       "rendered": "Me",
       "type": "div",
-<<<<<<< HEAD
->>>>>>> e4e43441855ba2ad17c64e3c3509e38a4dc6cc94
-=======
->>>>>>> e4e43441855ba2ad17c64e3c3509e38a4dc6cc94
     },
   ],
   Symbol(enzyme.__options__): Object {

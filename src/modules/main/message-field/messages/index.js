@@ -10,12 +10,7 @@ import './style.css';
 export class Messages extends PureComponent {
 
   render() {
-<<<<<<< HEAD
     const { messages } = this.props;
-=======
-    const { messages, id } = this.props;
-    console.log(id);
->>>>>>> e4e43441855ba2ad17c64e3c3509e38a4dc6cc94
     return (
       <div className='messages-container'>
         {messages.map((message, index) => (
@@ -32,12 +27,8 @@ export class Messages extends PureComponent {
 
 const mapStateToProps = (state) => ({
   messages: selectMessages(state),
-<<<<<<< HEAD
-  lastMessage: selectLastMessage(state)
-=======
   lastMessage: selectLastMessage(state),
   id: state.messages.id
->>>>>>> e4e43441855ba2ad17c64e3c3509e38a4dc6cc94
 });
 
 const mapDispatchToProps = {
