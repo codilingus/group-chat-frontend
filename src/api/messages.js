@@ -1,6 +1,6 @@
 import { get, toJSON } from '../utils/index';
 
-export const fetchMessages = ({ id, timestamp }) => Promise.resolve(
+export const fetchMessages = ({ conversationId, timestamp }) => Promise.resolve(
   [
     { timestamp: 10, text: 'Message', userId: 0 },
     { timestamp: 10, text: 'Message reply', userId: 1 }
@@ -10,9 +10,9 @@ export const fetchMessages = ({ id, timestamp }) => Promise.resolve(
 //   'http://localhost:8080' + createGetMessageQueryString(id, timestamp)
 // ).then(toJSON);
 
-const createGetMessageQueryString = (id, timestamp) => {
+const createGetMessageQueryString = (conversationId, timestamp) => {
   if (timestamp) {
-    return `/messages/private/${id}?newerThan=${timestamp}`;
+    return `/messages/private/${conversationId}?newerThan=${timestamp}`;
   }
-  return `/messages/private/${id}`;
+  return `/messages/private/${conversationId}`;
 };

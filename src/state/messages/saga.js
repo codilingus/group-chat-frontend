@@ -12,10 +12,10 @@ export default function* () {
 
   while (true) {
     yield delay(1000);
-    const id = yield select(selectActiveConversationId);
+    const conversationId = yield select(selectActiveConversationId);
     const timestamp = yield select(selectLastMessageTimestamp);
     const payload = {
-      id,
+      conversationId,
       timestamp
     };
     try {
