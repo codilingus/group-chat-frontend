@@ -4,7 +4,7 @@ import { withRouter } from 'react-router';
 import Header from '../header';
 import Login from '../login';
 import Registration from '../registration';
-//import './style.css';
+import './style.scss';
 
 class WelcomePage extends Component {
   render() {

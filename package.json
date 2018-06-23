@@ -3,9 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "babel-core": "^6.26.3",
-    "babel-jest": "^23.0.1",
+    "babel-core": "6.26.0",
+    "babel-eslint": "7.2.3",
+    "babel-jest": "20.0.3",
+    "babel-loader": "7.1.2",
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-react-app": "^3.1.1",
+    "babel-runtime": "6.26.0",
     "classnames": "^2.2.6",
     "history": "^4.7.2",
     "react": "^16.4.0",
@@ -29,14 +34,12 @@
   "scripts": {
     "start": "better-npm-run start",
     "build": "better-npm-run build",
-    "test": "better-npm-run test",
-    "eject": "react-scripts eject"
+    "test": "better-npm-run test"
   },
   "betterScripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "jest --watch --config=jest.config.json",
-    "eject": "react-scripts eject"
+    "start": "node scripts/start.js",
+    "build": "node scripts/start.js",
+    "test": "jest --watch --config=jest.config.json"
   },
   "devDependencies": {
     "better-npm-run": "^0.1.0",
@@ -45,5 +48,8 @@
     "enzyme-to-json": "^3.3.4",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^23.1.0"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
   }
 }

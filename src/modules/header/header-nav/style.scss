@@ -1,0 +1,16 @@
+.header-nav {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 1rem;
+}
+
+.header-nav-link {
+  color: rgb(105, 155, 84);
+  padding: 1rem;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  transition: 0.3s color;
+  &:hover {
+    color: darken(rgb(105, 155, 84), 10%);
+  }
+}

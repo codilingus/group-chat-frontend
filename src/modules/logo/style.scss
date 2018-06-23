@@ -1,0 +1,17 @@
+.logo-container {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  color: rgba(105, 155, 84, 0.8);
+  font-size: 30px;
+  font-family: 'Lobster', cursive;
+  padding-left: 2rem;
+  transition: 0.3s color;
+  &:hover {
+    color: rgb(105, 155, 84);
+  }
+}
+
+.logo-icon {
+  margin-right: 0.4rem;
+}
