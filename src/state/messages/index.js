@@ -18,13 +18,11 @@ export const messagesReducer = handleActions({
 
   [START_CONVERSATION]: (state) => ({
     ...state,
-    messages: [],
-    loading: true
+    messages: []
   }),
 
   [FETCH_MESSAGES_SUCCESS]: (state, { payload }) => ({
     ...state,
-    loading: false,
     messages: [
       ...state.messages,
       ...payload.messages,

@@ -11,7 +11,6 @@ export class Messages extends PureComponent {
 
   render() {
     const { messages, id } = this.props;
-    console.log(id);
     return (
       <div className='messages-container'>
         {messages.map((message, index) => (

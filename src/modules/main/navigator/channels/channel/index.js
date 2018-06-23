@@ -22,12 +22,8 @@ export class Channel extends PureComponent {
   }
 };
 
-const mapStateToProps = () => ({
-
-});
-
 const mapDispatchToProps = {
   onStartConversation: startConversation
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Channel);
+export default connect(null, mapDispatchToProps)(Channel);
