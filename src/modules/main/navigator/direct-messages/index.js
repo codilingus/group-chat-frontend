@@ -5,8 +5,6 @@ import { fetchUsers } from '../../../../state/users';
 import DirectMessage from './direct-message';
 import './style.css';
 
-const directMessages = ['Anna', 'Jan', 'Ola'];
-
 export class DirectMessages extends Component {
 
   handleAddDirectMessage = () => {

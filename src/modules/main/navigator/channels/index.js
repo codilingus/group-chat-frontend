@@ -3,6 +3,7 @@ import FaPlus from 'react-icons/lib/fa/plus-circle';
 import { connect } from 'react-redux';
 import { addNewChannel } from '../../../../state/channels';
 import Channel from './channel';
+import { fetchActiveUsers } from '.././../../../state/active-users';
 import './style.css';
 
 export class Channels extends Component {
@@ -60,7 +61,8 @@ export class Channels extends Component {
         {channels.map((channel, index) =>
           (<Channel
             key={index}
-            name={channel.name} />)
+            name={channel.name}
+            id={channel.id} />)
         )}
       </div>
     );

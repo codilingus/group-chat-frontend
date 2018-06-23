@@ -12,8 +12,7 @@ describe('should create Registration Container', () => {
   beforeEach(() => {
     store = mockStore();
     store.dispatch = jest.fn();
-    wrapper = shallow(
-      <ConnectedRegistration store={store} />)
+    wrapper = shallow(<ConnectedRegistration store={store} />)
   });
 
   it('shuold have messages props', () => {

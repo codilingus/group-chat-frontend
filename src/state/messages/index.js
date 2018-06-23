@@ -6,24 +6,19 @@ const initialState = {
     { text: 'world', timestamp: 4, userId: 1 }
   ],
   loading: false,
-  id: 5,
+  conversationId: 5,
   conversetionist: 1
 };
 
-const CLEAR_MESSAGE_BOARD = 'messages: clear-message-board';
-export const FETCH_MESSAGES = 'messages: fetch-messages';
+export const START_CONVERSATION = 'messages: start-conversation';
 export const FETCH_MESSAGES_SUCCESS = 'messages: fetch-messages-success';
 const FETCH_MESSAGES_FAILURE = 'messages: fetch-messages-failure';
 
 export const messagesReducer = handleActions({
 
-  [CLEAR_MESSAGE_BOARD]: (state, { payload }) => ({
+  [START_CONVERSATION]: (state) => ({
     ...state,
-    messages: [{}]
-  }),
-
-  [FETCH_MESSAGES]: (state) => ({
-    ...state,
+    messages: [],
     loading: true
   }),
 
@@ -38,7 +33,6 @@ export const messagesReducer = handleActions({
 
 }, initialState);
 
-export const clearMessageBoard = createAction(CLEAR_MESSAGE_BOARD);
-export const fetchMessages = createAction(FETCH_MESSAGES);
+export const startConversation = createAction(START_CONVERSATION);
 export const fetchMessagesSuccess = createAction(FETCH_MESSAGES_SUCCESS);
 export const fetchMessagesFailure = createAction(FETCH_MESSAGES_FAILURE);

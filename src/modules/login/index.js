@@ -11,7 +11,7 @@ export class Login extends Component {
       username: '',
       password: ''
     }
-  };
+  }
 
   handleUsername = (username) => {
     this.setState({ username });
@@ -48,7 +48,7 @@ export class Login extends Component {
       </div>
     );
   }
-}
+};
 
 const mapStateToProps = (state) => ({
   invalidLogin: state.login.invalidLogin

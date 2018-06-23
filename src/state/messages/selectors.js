@@ -11,7 +11,7 @@ export const selectLastMessage = createSelector(
 
 export const selectLastMessageTimestamp = createSelector(
   selectLastMessage,
-  (selectLastMessage) => selectLastMessage.timestamp
+  lastMessage => lastMessage && lastMessage.timestamp
 );
 
 export const selectActiveConversationId = createSelector(

@@ -1,10 +1,13 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
+import { connect } from 'react-redux';
+import { startConversation } from '../../../../../state/messages';
 import './style.css';
 
-export class Channel extends Component {
+export class Channel extends PureComponent {
 
   handleDirectToChannel = () => {
-    console.log('to do');
+    const { id } = this.props;
+    this.props.onStartConversation({ id });
   };
 
   render() {
@@ -16,6 +19,14 @@ export class Channel extends Component {
       </div>
     );
   }
-}
+};
 
-export default Channel;
+const mapStateToProps = () => ({
+
+});
+
+const mapDispatchToProps = {
+  onStartConversation: startConversation
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Channel);
