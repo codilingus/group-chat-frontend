@@ -3,11 +3,7 @@ import configureStore from 'redux-mock-store';
 import { shallow } from 'enzyme';
 import ConnectedLogin, { Login } from '../../modules/login';
 
-<<<<<<< HEAD
 const LOGIN = 'session-user: login';
-=======
-const LOGIN = 'login: login';
->>>>>>> e4e43441855ba2ad17c64e3c3509e38a4dc6cc94
 
 describe('Should render Login container', () => {
   const initialState = { login: { invalidLogin: false } };
