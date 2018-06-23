@@ -1,32 +1,28 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import classnames from 'classnames';
 import FaCircle from 'react-icons/lib/fa/circle';
 import { connect } from 'react-redux';
+import { startConversation } from '../../../../../state/messages';
 import {
-  clearMessageBoard,
-  fetchMessages,
-  setConversationistAndClearBoard
-} from '../../../../../state/messages';
+  selectUserStatus,
+  selectActiveUsers
+} from '../../../../../state/active-users/selectors';
 import './style.css';
 
-class DirectMessage extends Component {
+class DirectMessage extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      isActive: this.props.isActive
-      //props in the future
     }
   }
 
   handleFetchingMessage = () => {
     const { id } = this.props;
-    this.props.onClearMessageBoard();
-    this.props.onFetchingMessage({ id });
+    this.props.onStartConversation({ id });
   };
 
   render() {
-    const { name } = this.props;
-    const { isActive } = this.state;
+    const { name, isActive } = this.props;
     return (
       <div className='direct-message-container'>
         <FaCircle className={classnames('inactive-user',
@@ -40,13 +36,12 @@ class DirectMessage extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-
+const mapStateToProps = (state, props) => ({
+  isActive: selectUserStatus(state, props.id)
 });
 
 const mapDispatchToProps = {
-  onFetchingMessage: fetchMessages,
-  onClearMessageBoard: clearMessageBoard
+  onStartConversation: startConversation
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(DirectMessage);

@@ -13,8 +13,7 @@ describe('Should render DirectMessages container', () => {
   beforeEach(() => {
     store = mockStore(state);
     store.dispatch = jest.fn();
-    wrapper = shallow(
-      <ConnectedDirectMessages store={store} />)
+    wrapper = shallow(<ConnectedDirectMessages store={store} />)
   });
 
   test('should render DirectMessages correctly', () => {

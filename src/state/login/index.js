@@ -2,7 +2,7 @@ import { handleActions, createAction } from 'redux-actions';
 
 const initialState = ({
   loading: false,
-  invalidLogin: 'false'
+  invalidLogin: false
 });
 
 export const LOGIN = 'login: login';

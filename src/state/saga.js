@@ -4,12 +4,13 @@ import channelsSaga from './channels/saga';
 import sessionUserSaga from './session-user/saga';
 import userSaga from './users/saga';
 import messagesSaga from './messages/saga';
-
+import activeUsersSaga from './active-users/saga';
 
 export default function* () {
   yield* currentUserSaga();
   yield* channelsSaga();
   yield* userSaga();
-  yield fork(messagesSaga);
   yield* sessionUserSaga();
+  yield fork(messagesSaga);
+  yield fork(activeUsersSaga);
 }

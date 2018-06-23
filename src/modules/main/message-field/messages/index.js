@@ -27,8 +27,7 @@ export class Messages extends PureComponent {
 
 const mapStateToProps = (state) => ({
   messages: selectMessages(state),
-  lastMessage: selectLastMessage(state),
-  id: state.messages.id
+  lastMessage: selectLastMessage(state)
 });
 
 const mapDispatchToProps = {
