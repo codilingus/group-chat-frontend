@@ -1,4 +1,5 @@
 export default {
   loading: false,
-  activeUser: null
+  activeUser: null,
+  invalidLogin: false
 };

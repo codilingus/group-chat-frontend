@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should render Login container should create Login 1`] = `
+exports[`Should render Login container should render Login correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
@@ -112,5 +112,3 @@ ShallowWrapper {
   },
 }
 `;
-
-exports[`should render Login correctly 1`] = `undefined`;

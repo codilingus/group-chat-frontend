@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should create Messages Container should create Messages 1`] = `
+exports[`should create Messages Container should render Messages correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
@@ -28,6 +28,7 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
+      "id": 5,
       "lastMessage": Object {
         "text": "world",
         "timestamp": 4,
@@ -83,6 +84,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
+        "id": 5,
         "lastMessage": Object {
           "text": "world",
           "timestamp": 4,

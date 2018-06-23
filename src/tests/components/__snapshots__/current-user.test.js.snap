@@ -16,12 +16,6 @@ ShallowWrapper {
       }
     }
   />,
-
-exports[`should render CurrentUser correctly 1`] = `
-ShallowWrapper {
-  "length": 1,
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <CurrentUser />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -67,29 +61,46 @@ ShallowWrapper {
     "ref": null,
     "rendered": null,
     "type": [Function],
-    "nodeType": "host",
-    "props": Object {
-      "children": "Me",
-      "className": "current-user-container",
-      "onClick": undefined,
-    },
-    "ref": null,
-    "rendered": "Me",
-    "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "host",
+      "nodeType": "class",
       "props": Object {
-        "children": "Me",
-        "className": "current-user-container",
-        "onClick": undefined,
+        "activeUser": null,
+        "dispatch": [MockFunction],
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [MockFunction],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "storeSubscription": Subscription {
+          "listeners": Object {
+            "clear": [Function],
+            "get": [Function],
+            "notify": [Function],
+            "subscribe": [Function],
+          },
+          "onStateChange": [Function],
+          "parentSub": undefined,
+          "store": Object {
+            "clearActions": [Function],
+            "dispatch": [MockFunction],
+            "getActions": [Function],
+            "getState": [Function],
+            "replaceReducer": [Function],
+            "subscribe": [Function],
+          },
+          "unsubscribe": [Function],
+        },
       },
       "ref": null,
-      "rendered": "Me",
-      "type": "div",
+      "rendered": null,
+      "type": [Function],
     },
   ],
   Symbol(enzyme.__options__): Object {
