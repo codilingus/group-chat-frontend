@@ -1,7 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e4e43441855ba2ad17c64e3c3509e38a4dc6cc94
 exports[`should create Messages Container should create Messages 1`] = `
 ShallowWrapper {
   "length": 1,
@@ -145,6 +148,9 @@ ShallowWrapper {
 }
 `;
 
+<<<<<<< HEAD
+>>>>>>> e4e43441855ba2ad17c64e3c3509e38a4dc6cc94
+=======
 >>>>>>> e4e43441855ba2ad17c64e3c3509e38a4dc6cc94
 exports[`should create Messages Container should render Messages correctly 1`] = `
 ShallowWrapper {

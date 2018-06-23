@@ -1,7 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> e4e43441855ba2ad17c64e3c3509e38a4dc6cc94
 exports[`Should render Login container should create Login 1`] = `
 ShallowWrapper {
   "length": 1,
@@ -115,6 +118,9 @@ ShallowWrapper {
 }
 `;
 
+<<<<<<< HEAD
+>>>>>>> e4e43441855ba2ad17c64e3c3509e38a4dc6cc94
+=======
 >>>>>>> e4e43441855ba2ad17c64e3c3509e38a4dc6cc94
 exports[`Should render Login container should render Login correctly 1`] = `
 ShallowWrapper {
@@ -229,6 +235,11 @@ ShallowWrapper {
 }
 `;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+exports[`should render Login correctly 1`] = `undefined`;
+>>>>>>> e4e43441855ba2ad17c64e3c3509e38a4dc6cc94
 =======
 
 exports[`should render Login correctly 1`] = `undefined`;
