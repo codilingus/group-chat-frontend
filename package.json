@@ -27,12 +27,19 @@
     "reselect": "^3.0.1"
   },
   "scripts": {
+    "start": "better-npm-run start",
+    "build": "better-npm-run build",
+    "test": "better-npm-run test",
+    "eject": "react-scripts eject"
+  },
+  "betterScripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "jest --watch --config=jest.config.json",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "better-npm-run": "^0.1.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.4",
