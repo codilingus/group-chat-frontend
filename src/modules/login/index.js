@@ -52,7 +52,7 @@ class Login extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    invalidLogin: state.login.invalidLogin
+    invalidLogin: state.sessionUser.invalidLogin
   };
 }
 

@@ -2,7 +2,8 @@ import { handleActions, createAction } from 'redux-actions';
 
 const initialState = ({
   loading: false,
-  activeUser: null
+  activeUser: null,
+  invalidLogin: false
 });
 
 export const LOGIN = 'session-user: login';
@@ -16,13 +17,11 @@ export const sessionUserReducer = handleActions({
   [LOGIN]: (state) => ({
     ...state,
     loading: true,
-    invalidLogin: false,
   }),
 
   [LOGIN_SUCCESS]: (state, { payload: userDetails }) => ({
     ...state,
     loading: false,
-    invalidLogin: false,
     activeUser: userDetails.username
   }),
 

@@ -1,8 +1,8 @@
-import { logIn, logInSuccess, logInFailure } from '../../state/login';
+import { logIn, logInSuccess, logInFailure } from '../../state/session-user';
 
-const LOGIN = 'login: login';
-const LOGIN_SUCCESS = 'login: login-success';
-const LOGIN_FAILURE = 'login: login-failure'
+const LOGIN = 'session-user: login';
+const LOGIN_SUCCESS = 'session-user: login-success';
+const LOGIN_FAILURE = 'session-user: login-failure';
 
 test('should create login action', () => {
   const userData = {

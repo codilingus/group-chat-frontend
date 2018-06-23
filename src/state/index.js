@@ -11,7 +11,7 @@ const rootReducer = combineReducers({
   channels: channelsReducer,
   users: usersReducer,
   messages: messagesReducer,
-  login: sessionUserReducer,
+  sessionUser: sessionUserReducer,
   router: routerReducer 
 });
 
