@@ -4,7 +4,7 @@ import { currentUserReducer } from './current-user/index';
 import { channelsReducer } from './channels/index';
 import { usersReducer } from './users/index';
 import { messagesReducer } from './messages/index';
-import { loginReducer } from "./login/index";
+import { sessionUserReducer } from "./session-user/index";
 import { activeUsersReducer } from './active-users/index';
 
 const rootReducer = combineReducers({
@@ -12,7 +12,7 @@ const rootReducer = combineReducers({
   channels: channelsReducer,
   users: usersReducer,
   messages: messagesReducer,
-  login: loginReducer,
+  sessionUser: sessionUserReducer,
   router: routerReducer,
   activeUsers: activeUsersReducer
 });

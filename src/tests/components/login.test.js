@@ -2,11 +2,11 @@ import React from 'react';
 import configureStore from 'redux-mock-store';
 import { shallow } from 'enzyme';
 import ConnectedLogin, { Login } from '../../modules/login';
+import initialState from '../fixtures/root-reducer';
 
-const LOGIN = 'login: login';
+const LOGIN = 'session-user: login';
 
 describe('Should render Login container', () => {
-  const initialState = { login: { invalidLogin: false } };
   const mockStore = configureStore();
   let store, wrapper, onLogIn;
 

@@ -1,6 +1,6 @@
 import channels from './channels';
 import messages from './messages';
-import login from './login';
+import sessionUser from './session-user';
 import users from './users';
 import currentUser from './current-user'
 
@@ -9,5 +9,5 @@ export default {
   users,
   currentUser,
   channels,
-  login
+  sessionUser
 };

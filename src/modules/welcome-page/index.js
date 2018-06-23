@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import Header from '../header';
 import Login from '../login';
 import Registration from '../registration';
-import './style.css';
+//import './style.css';
 
 class WelcomePage extends Component {
   render() {

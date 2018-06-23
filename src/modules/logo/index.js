@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import FaChat from 'react-icons/lib/fa/comments';
-import './style.css';
+//import './style.css';
 
 class Logo extends Component {
   render() {

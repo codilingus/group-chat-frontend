@@ -112,5 +112,3 @@ ShallowWrapper {
   },
 }
 `;
-
-exports[`Should render DirectMessages container should render DirectMessages correctly 1`] = `undefined`;

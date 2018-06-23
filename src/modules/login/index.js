@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import InputWrapper from '../../components/input-wrapper';
 import './style.css';
-import { logIn } from '../../state/login';
+import { logIn } from '../../state/session-user/index'
 
 export class Login extends Component {
   constructor() {
@@ -50,9 +50,11 @@ export class Login extends Component {
   }
 };
 
-const mapStateToProps = (state) => ({
-  invalidLogin: state.login.invalidLogin
-});
+const mapStateToProps = (state) => {
+  return {
+    invalidLogin: state.sessionUser.invalidLogin
+  };
+}
 
 const mapDispatchToProps = {
   onLogIn: logIn

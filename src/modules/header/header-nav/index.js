@@ -20,10 +20,4 @@ class HeaderNav extends Component {
   }
 };
 
-// const mapStateToProps 
-
 export default HeaderNav;
-
-{/* <Link className='header-nav-link'
-to='/me'>
-</Link> */}

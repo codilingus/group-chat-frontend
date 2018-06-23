@@ -12,11 +12,12 @@ export const post = (url, body, additionalConfig = {}) => fetch(url, {
 export const toJSON = (response) => response.json();
 
 export const get = (url, additionalConfig = {}) => fetch(url, {
+  mode: 'cors',
   method: 'GET',
   'credentials': 'include',
+  cache: 'no-cache',
   ...additionalConfig,
   headers: {
-    'Content-Type': 'application/json',
     ...additionalConfig.headers
   }
 });

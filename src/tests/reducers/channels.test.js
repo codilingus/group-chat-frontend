@@ -18,7 +18,5 @@ test('should add new channel', () => {
     payload: newChannel
   };
   const state = channelsReducer(channels, action);
-  console.log(action.payload);
-  console.log(state);
   //expect(state).toEqual([...channels, action.payload]);
 });
