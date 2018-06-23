@@ -18,7 +18,6 @@ export default function* () {
 
 function* onLogin(action) {
   const { payload } = action;
-  const username = payload.username;
   try {
     const userDetails = yield call(logInUser, payload);
     yield put(push('/me'));

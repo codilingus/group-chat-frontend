@@ -5,14 +5,14 @@ const initialState = ({
   activeUser: null
 });
 
-export const LOGIN = 'login: login';
-const LOGIN_SUCCESS = 'login: login-success';
-const LOGIN_FAILURE = 'login: login-failure';
-export const LOGOUT = 'logout: logout';
-const LOGOUT_SUCCESS = 'logout: logout-success';
-const LOGOUT_FAILURE = 'logout: logout-failure';
+export const LOGIN = 'session-user: login';
+const LOGIN_SUCCESS = 'session-user: login-success';
+const LOGIN_FAILURE = 'session-user: login-failure';
+export const LOGOUT = 'session-user: logout';
+const LOGOUT_SUCCESS = 'session-user: logout-success';
+const LOGOUT_FAILURE = 'session-user: logout-failure';
 
-export const logReducer = handleActions({
+export const sessionUserReducer = handleActions({
   [LOGIN]: (state) => ({
     ...state,
     loading: true,
@@ -49,8 +49,6 @@ export const logReducer = handleActions({
   })
 }, initialState);
  
-
-
 export const logIn = createAction(LOGIN);
 export const logInSuccess = createAction(LOGIN_SUCCESS);
 export const logInFailure = createAction(LOGIN_FAILURE);

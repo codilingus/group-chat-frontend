@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './style.css';
-import { logOut } from '../../../../state/log/index';
+import { logOut } from '../../../../state/session-user/index';
 
 class LogOut extends Component {
   render() {

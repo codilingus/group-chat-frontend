@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import createSagaMiddleware from 'redux-saga';
-import { Router } from 'react-router';
 import createHistory from "history/createBrowserHistory";
 import { 
   routerMiddleware, 
