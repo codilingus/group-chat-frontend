@@ -16,10 +16,22 @@ const FETCH_MESSAGES_FAILURE = 'messages: fetch-messages-failure';
 
 export const messagesReducer = handleActions({
 
+<<<<<<< HEAD
   [START_CONVERSATION]: (state) => ({
     ...state,
     messages: [],
     loading: true
+=======
+  [CLEAR_MESSAGE_BOARD]: (state, { payload }) => ({
+    ...state,
+    messages: [{}]
+  }),
+
+  [FETCH_MESSAGES]: (state, { payload }) => ({
+    ...state,
+    loading: true,
+    id: payload.id
+>>>>>>> e4e43441855ba2ad17c64e3c3509e38a4dc6cc94
   }),
 
   [FETCH_MESSAGES_SUCCESS]: (state, { payload }) => ({
