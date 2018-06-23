@@ -1,5 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+<<<<<<< HEAD
 exports[`Should render CurrentUser container should render CurrentUser correctly 1`] = `
 ShallowWrapper {
   "length": 1,
@@ -16,6 +17,13 @@ ShallowWrapper {
       }
     }
   />,
+=======
+exports[`should render CurrentUser correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CurrentUser />,
+>>>>>>> e4e43441855ba2ad17c64e3c3509e38a4dc6cc94
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -26,6 +34,7 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
+<<<<<<< HEAD
     "nodeType": "class",
     "props": Object {
       "activeUser": null,
@@ -61,11 +70,23 @@ ShallowWrapper {
     "ref": null,
     "rendered": null,
     "type": [Function],
+=======
+    "nodeType": "host",
+    "props": Object {
+      "children": "Me",
+      "className": "current-user-container",
+      "onClick": undefined,
+    },
+    "ref": null,
+    "rendered": "Me",
+    "type": "div",
+>>>>>>> e4e43441855ba2ad17c64e3c3509e38a4dc6cc94
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
+<<<<<<< HEAD
       "nodeType": "class",
       "props": Object {
         "activeUser": null,
@@ -101,6 +122,17 @@ ShallowWrapper {
       "ref": null,
       "rendered": null,
       "type": [Function],
+=======
+      "nodeType": "host",
+      "props": Object {
+        "children": "Me",
+        "className": "current-user-container",
+        "onClick": undefined,
+      },
+      "ref": null,
+      "rendered": "Me",
+      "type": "div",
+>>>>>>> e4e43441855ba2ad17c64e3c3509e38a4dc6cc94
     },
   ],
   Symbol(enzyme.__options__): Object {
