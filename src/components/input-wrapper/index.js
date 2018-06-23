@@ -8,7 +8,7 @@ class InputWrapper extends Component {
     this.state = {
       value: ''
     }
-  }
+  };
 
   onChange = (event) => {
     const value = event.target.value;
@@ -16,7 +16,7 @@ class InputWrapper extends Component {
       value
     });
     this.props.onChange(value);
-  }
+  };
 
   render() {
     const { text, type, placeholder, error } = this.props;
